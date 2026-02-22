@@ -1,0 +1,70 @@
+HERRAMIENTA UTILIZADA    JD-GUI
+Clases identificadas:
+App: clase principal
+BubbleSort
+MargeSortDemo
+QuickSort
+SumArray
+
+Que operaciones se realizan sobre los arreglos:
+Creación de arreglos
+int[] d1 = { 3, 5, 2, 9 };
+int[] d2 = { 8, 3, 7, 4, 9, 2 };
+ Recorrido de arreglos
+Con for normal:
+for (int j = 0; j < n - 1; j++)
+Con for-each:
+for (int n : arr)
+Intercambio de elementos (swap)
+Ejemplo en QuickSort:
+int k = arr[i];
+arr[i] = arr[j];
+arr[j] = k;
+Ejemplo en BubbleSort:
+int temp = arr[j];
+arr[j] = arr[j + 1];
+arr[j + 1] = temp;
+En MergeSort:
+int[] left = Arrays.copyOfRange(a, 0, mid);
+int[] right = Arrays.copyOfRange(a, mid, a.length);
+ Uso del método sort de Java
+Arrays.sort(arr2);
+
+
+ 3. Algoritmos de ordenamiento utilizados
+El JAR implementa 4 formas de ordenar arreglos:
+Algoritmo     		Clase			Tipo
+Bubble Sort		BubbleSort		Iterativo
+QuickSort		QuickSort		Recursivo
+MergeSort		MergeSortDemo	Recursivo
+Arrays.sort()		Clase App		Método interno de Java
+
+
+
+1) Bubble Sort
+Compara elementos adyacentes
+Intercambia si están desordenados
+Optimizado con bandera swapped
+Complejidad:
+Tiempo: O(n²)
+Espacio: O(1)
+2) QuickSort
+Selecciona pivote
+Divide arreglo en menores y mayores
+Llama recursivamente
+Complejidad promedio:
+Tiempo: O(n log n)
+Peor caso: O(n²)
+Espacio: O(log n)
+3) MergeSort
+Divide arreglo en dos
+Ordena recursivamente
+Une los resultados
+Complejidad:
+Tiempo: O(n log n)
+Espacio: O(n)
+4)Arrays.sort()
+Usa internamente:
+Dual-Pivot QuickSort para enteros
+Complejidad:
+Tiempo: O(n log n)

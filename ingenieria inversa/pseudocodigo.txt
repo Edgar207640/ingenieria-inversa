@@ -1,0 +1,53 @@
+Pseudocodigo
+Inicio
+
+Leer arreglo A
+
+Si tamaño < 2
+    Mostrar error
+FinSi
+
+Inicializar:
+    mayor = -∞
+    segundoMayor = -∞
+    menor = +∞
+    segundoMenor = +∞
+
+Para cada número n en A hacer
+
+    Si n > mayor entonces
+        segundoMayor = mayor
+        mayor = n
+    Sino si n > segundoMayor y n != mayor entonces
+        segundoMayor = n
+    FinSi
+
+    Si n < menor entonces
+        segundoMenor = menor
+        menor = n
+    Sino si n < segundoMenor y n != menor entonces
+        segundoMenor = n
+    FinSi
+
+FinPara
+
+Mostrar segundoMayor
+Mostrar segundoMenor
+
+Fin
+
+
+¿Por qué funciona?
+Porque:
+Se recorren todos los elementos una sola vez.
+Se mantienen actualizadas 4 variables:
+mayor
+segundoMayor
+menor
+segundoMenor
+Cada vez que encontramos un nuevo mayor o menor, actualizamos correctamente el anterior.
+Nunca ordenamos el arreglo.
+Complejidad
+ Tiempo
+Solo un recorrido: 
+Solo usamos 4 variables adicionales:
